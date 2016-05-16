@@ -9,5 +9,9 @@ mongo.connect(url, function(err, db){
     collection.find().toArray(function(err, doc){
       console.log(doc);
     });
+  }else{
+    collection.find({"name": input}).toArray(function(err, doc){
+      console.log(doc)
+    })
   };
 });
